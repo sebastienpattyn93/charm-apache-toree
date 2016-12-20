@@ -1,0 +1,7 @@
+is: apache-toree
+includes: ['layer:basic', 'layer:apt', 'interface:http', 'interface:spark']
+repo: git@github.com/sebastienpattyn93/tengu-charms.git
+options:
+  apt:
+    packages:
+       - 'python-pip'

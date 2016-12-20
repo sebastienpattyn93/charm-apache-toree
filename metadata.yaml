@@ -1,0 +1,19 @@
+name: apache-toree
+summary: This charm deploys the subordinate charm for apache-toree
+maintainer: Sebastien Pattyn <sebastien.pattyn@qrama.io>
+description: |
+  Apache Toree was designed in response to our needs to enable applications
+  that are both interactive and remote to work with Apache Spark. When we first
+  started connecting applications to Spark, we discovered the existing
+  interaction mechanisms had serious limitations, such as requiring code to be
+  bundled in a JAR and writing results out to an external datastore.
+tags:
+  - application
+subordinate: true
+requires:
+  spark:
+    interface: spark
+    scope: container
+  application:
+    interface: http
+series: ['trusty']
